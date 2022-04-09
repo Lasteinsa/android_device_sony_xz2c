@@ -8,9 +8,9 @@
 $(call inherit-product, device/sony/xz2c/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_xz2c
+PRODUCT_NAME := awaken_xz2c
 PRODUCT_DEVICE := xz2c
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
@@ -24,3 +24,24 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="H8324-user 10 52.1.A.3.49 052001A003004902006556692 release-keys"
 
 BUILD_FINGERPRINT := Sony/H8324/H8324:10/52.1.A.3.49/052001A003004902006556692:user/release-keys
+
+# Boot Animation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# GApps
+TARGET_GAPPS_ARCH := arm64
+USE_GAPPS := true
+
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Google Assistant
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+# Unofficial
+AWAKEN_BUILD_TYPE := UNOFFICIAL
+
+# Misc
+TARGET_SUPPORTS_QUICK_TAP := true
+USE_PIXEL_CHARGING := true
+TARGET_USES_BLUR := true
